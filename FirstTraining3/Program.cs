@@ -11,6 +11,7 @@ namespace FirstTraining3
             double doubleTest;
             char charTest;
             bool boolTest;
+            DateTime dtTest;
 
             var style = NumberStyles.Float;
             var culture = CultureInfo.CreateSpecificCulture("eu-ES");
@@ -29,6 +30,9 @@ namespace FirstTraining3
 
             else if (char.TryParse(str, out charTest))
                 return charTest.GetType().Name;
+
+            else if (DateTime.TryParse(str, out dtTest))
+                return dtTest.GetType().Name;
 
             return "String";
         }
